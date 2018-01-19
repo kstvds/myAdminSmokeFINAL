@@ -56,7 +56,7 @@ public class Filter_customer {
 	Configuration Config = new Configuration();
 	Takescreenshot obj = new Takescreenshot();
 	Cus_LoginPage login = new Cus_LoginPage();
-	// HomePage home = new HomePage();
+	//  sdscdfsdHomePage home = new HomePage();
 	// NewAccoBooking acco= new NewAccoBooking();
 	// Operations opo = new Operations();
 	WebDriver driverqa;
