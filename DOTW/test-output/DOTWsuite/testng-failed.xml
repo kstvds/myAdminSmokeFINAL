@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [DOTWsuite]">
+  <test name="MyAdminSmokeSeven(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="automationFramework.Accommodation_booking_for_adults_with_children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="book" invocation-numbers="0"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- automationFramework.Accommodation_booking_for_adults_with_children -->
+    </classes>
+  </test> <!-- MyAdminSmokeSeven(failed) -->
+</suite> <!-- Failed suite [DOTWsuite] -->
