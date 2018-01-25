@@ -31,9 +31,10 @@ public class NewAccoBooking {
 
 	public static final By confirmBook = By.xpath("//*[@id='table_bookItinerary']/form/div[2]/div[2]/a");
 
-	public static final By bookChannel = By.xpath("//*[@id='allSuppliers']/span/span[1]");
+	public static final By bookChannel = By.xpath("//*[@id='allSuppliers']/span/span[1]"); 
 
 	public static final By thirdPartyChannel = By.xpath("//*[@id='Suppliers[Third Party Channels]']/span/span[2]");
+	
 
 	
     public static final By thirdParty = By.xpath("//*[@id='Suppliers[1807]']/span/span[2]");

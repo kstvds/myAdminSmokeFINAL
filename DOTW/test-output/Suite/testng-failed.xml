@@ -5,13 +5,13 @@
   <test name="Test1(failed)" parallel="none">
     <parameter name="browsername" value="CH"/>
     <classes>
-      <class name="automationFramework.Accommodation_bookingHistory">
+      <class name="automationFramework.Accommodation_booking_3rdparty">
         <methods>
           <include name="afterTest"/>
-          <include name="bookinghistory" invocation-numbers="0"/>
+          <include name="bookthirdparty" invocation-numbers="0"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- automationFramework.Accommodation_bookingHistory -->
+      </class> <!-- automationFramework.Accommodation_booking_3rdparty -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

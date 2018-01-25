@@ -73,20 +73,19 @@ public class Accommodation_booking_3rdparty_multiroom {
 		Actions action = new Actions(driverqa);
 		try {
 			logger.info("Browser Opened");
-			System.out.println("2");
+		
 			driverqa.get(Config.getApplicationUrl());
-			System.out.println("3");
-
-			System.out.println("4");
+			
+			
 			logger.info("Test Case Started");
 			test.log(LogStatus.INFO, "Starting Login");
-			System.out.println("5");
+			
 			WebElement username = driverqa.findElement(LoginPage.uname);
 			username.clear();
-			username.sendKeys(excel.getData(11, 1, 0));
+			username.sendKeys(excel.getData(0, 1, 0));
 			WebElement password = driverqa.findElement(LoginPage.pwd);
 			password.clear();
-			password.sendKeys(excel.getData(11, 1, 1));
+			password.sendKeys(excel.getData(0, 1, 1));
 			driverqa.findElement(LoginPage.submit).click();
 			Thread.sleep(1000);
 			String expectedtitle = "DOTWconnect.com::DOTWconnect.com: My Admin";
@@ -131,7 +130,7 @@ public class Accommodation_booking_3rdparty_multiroom {
 		test.log(LogStatus.INFO, "Selecting Customer");
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Operations.company));
-			driverqa.findElement(Operations.company).sendKeys(excel.getData(11, 4, 0));
+			driverqa.findElement(Operations.company).sendKeys(excel.getData(0, 4, 0));
 			Thread.sleep(1000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
@@ -140,9 +139,9 @@ public class Accommodation_booking_3rdparty_multiroom {
 			Thread.sleep(2000);
 
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Accommodation_booking_3rdparty_multiroom/Customer-list.jpg");
-			wait.until(ExpectedConditions.visibilityOfElementLocated(Operations.chooseCustbook));
-			driverqa.findElement(Operations.chooseCustbook).click();
-			Thread.sleep(1000);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(Operations.chooseCust));
+			driverqa.findElement(Operations.chooseCust).click();
+			Thread.sleep(2000);
 			String searchpageactualtitle = driverqa.getTitle();
 			String searchpageexpectedtitle = "DOTWconnect.com::";
 			Assert.assertEquals(searchpageactualtitle, searchpageexpectedtitle);
@@ -161,15 +160,15 @@ public class Accommodation_booking_3rdparty_multiroom {
 		try {
 			test.log(LogStatus.INFO, "Starting HotelSearch");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(NewAccoBooking.AccomUnit));
-			driverqa.findElement(NewAccoBooking.AccomUnit).sendKeys(excel.getData(11, 7, 0));
-			Thread.sleep(2000);
+			driverqa.findElement(NewAccoBooking.AccomUnit).sendKeys(excel.getData(0, 15, 1));
+			Thread.sleep(3000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
 			driverqa.findElement(NewAccoBooking.inDate).clear();
-			driverqa.findElement(NewAccoBooking.inDate).sendKeys(excel.getData(11, 10, 0));
+			driverqa.findElement(NewAccoBooking.inDate).sendKeys(excel.getData(0, 15, 2));
 			driverqa.findElement(NewAccoBooking.outDate).clear();
-			driverqa.findElement(NewAccoBooking.outDate).sendKeys(excel.getData(11, 10, 1));
-			String expected = excel.getData(11, 7, 0);
+			driverqa.findElement(NewAccoBooking.outDate).sendKeys(excel.getData(0, 15, 3));
+			String expected = excel.getData(0, 15, 1);
 
 			/*
 			 * * Select noofchild = new
@@ -241,18 +240,18 @@ public class Accommodation_booking_3rdparty_multiroom {
 			
 			logger.info("Entering Passenger details");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(MultiAccothirdParty.paxFname1));
-			driverqa.findElement(MultiAccothirdParty.paxFname1).sendKeys(excel.getData(11, 14, 0));
+			driverqa.findElement(MultiAccothirdParty.paxFname1).sendKeys(excel.getData(0, 20, 1));
 			Thread.sleep(2000);
-			driverqa.findElement(MultiAccothirdParty.paxLname1).sendKeys(excel.getData(11, 14, 1));
+			driverqa.findElement(MultiAccothirdParty.paxLname1).sendKeys(excel.getData(0, 20, 2));
 			Select passengertitle = new Select(driverqa.findElement(MultiAccothirdParty.paxtitle1));
 			passengertitle.selectByIndex(1);
 			driverqa.findElement(NewAccoBooking.acceptChkBX).click();
 			
 			
 			
-			driverqa.findElement(MultiAccothirdParty.paxFname2).sendKeys(excel.getData(11, 14, 3));
+			driverqa.findElement(MultiAccothirdParty.paxFname2).sendKeys(excel.getData(0, 21, 1));
 			Thread.sleep(2000);
-			driverqa.findElement(MultiAccothirdParty.paxLname2).sendKeys(excel.getData(11, 14, 4));
+			driverqa.findElement(MultiAccothirdParty.paxLname2).sendKeys(excel.getData(0, 21, 2));
 			Select passengertitle2 = new Select(driverqa.findElement(MultiAccothirdParty.paxtitle2));
 			passengertitle2.selectByIndex(1);
 			driverqa.findElement(MultiAccothirdParty.accptchK2).click();

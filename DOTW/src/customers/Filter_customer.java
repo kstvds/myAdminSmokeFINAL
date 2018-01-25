@@ -56,9 +56,9 @@ public class Filter_customer {
 	Configuration Config = new Configuration();
 	Takescreenshot obj = new Takescreenshot();
 	Cus_LoginPage login = new Cus_LoginPage();
-	//  sdscdfsdHomePage home = new HomePage();
-	// NewAccoBooking acco= new NewAccoBooking();
-	// Operations opo = new Operations();
+	//HomePage home = new HomePage();
+	//NewAccoBooking acco= new NewAccoBooking();
+	//Operations opo = new Operations();
 	WebDriver driverqa;
 	ExtentReports rep = ExtentManager.getInstance();
 	ExtentTest test;

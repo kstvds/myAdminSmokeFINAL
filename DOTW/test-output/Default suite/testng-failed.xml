@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Rates.General_details_about_rates_can_be_edited">
+      <class name="automationFramework.Accommodation_booking_3rdparty">
         <methods>
-          <include name="pushrate"/>
+          <include name="afterTest"/>
+          <include name="bookthirdparty"/>
         </methods>
-      </class> <!-- Rates.General_details_about_rates_can_be_edited -->
+      </class> <!-- automationFramework.Accommodation_booking_3rdparty -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
